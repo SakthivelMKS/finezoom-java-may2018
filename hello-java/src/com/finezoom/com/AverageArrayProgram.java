@@ -3,7 +3,7 @@ package com.finezoom.com;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraySum {
+public class AverageArrayProgram {
 	// Array sum
 	public static void main(String[] args) {
 		//variable and array declaration
