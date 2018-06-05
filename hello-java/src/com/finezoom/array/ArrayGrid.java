@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.array;
 
 import java.util.Scanner;
 
