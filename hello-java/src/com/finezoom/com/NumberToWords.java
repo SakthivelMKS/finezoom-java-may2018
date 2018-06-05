@@ -4,9 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class NumberToWords {
+	//Main Method
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the value");
+		//Variable Declarations
 		int  value = scan.nextInt();
 		String castVariable;
 		castVariable = String.valueOf(value);
@@ -14,6 +16,7 @@ public class NumberToWords {
 		for (int i = 0; i < castVariable.length(); i++) {
         
 			char singleDigits = castVariable.charAt(i);
+			//hundred logic
 			if(i==0){
 				if (singleDigits == '1') {
 					a[i] = "OneHundred";
@@ -51,6 +54,7 @@ public class NumberToWords {
 
 					}
 			}
+			//10 logic
 			if(i==1){
 				if (singleDigits == '1') {
 					a[i] = "Eleven";
@@ -88,6 +92,7 @@ public class NumberToWords {
 
 					}
 			}
+			//1 & 2 Logic
 			if(i==2){
 			if (singleDigits == '1') {
 				a[i] = "one";
