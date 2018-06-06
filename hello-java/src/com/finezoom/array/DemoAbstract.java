@@ -1,6 +1,6 @@
 package com.finezoom.array;
 
-public abstract   class DemoAbstract implements DemoInterface{
+public abstract class DemoAbstract implements DemoInterface{
 
 
 	public  void add() {
@@ -24,12 +24,13 @@ public abstract   class DemoAbstract implements DemoInterface{
 	}
 	
 	public  int avergae(int a,int b){
+		System.out.println("sakthi");
 		int result = a + b;// TODO Auto-generated method stub
 		return result;
 		
 	}
 		
-	public  int remainder(int number)
+	public   int remainder(int number)
 	{
 		int result=number%2;
 		
