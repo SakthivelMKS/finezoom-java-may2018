@@ -42,6 +42,12 @@ public class Demo2 extends DemoAbstract {
 		return result+quotient;
 	}
 
+	@Override
+	public void demo() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/*@Override
 	public void subtract(){
 		
