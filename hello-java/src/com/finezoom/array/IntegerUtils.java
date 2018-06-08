@@ -56,7 +56,8 @@ public class IntegerUtils {
 
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[i] + array[j] == number) {
-					System.out.println("The pair of values is " + array[i] + "+\t" + array[j] + " is equal to" + number);
+					System.out
+							.println("The pair of values is " + array[i] + "+\t" + array[j] + " is equal to" + number);
 
 				}
 			}
@@ -64,92 +65,108 @@ public class IntegerUtils {
 		}
 
 	}
-	//Method for checking the arrays equal or not
-	public static boolean equalityOfTwoArrays(int[]array1,int[]array2) {
-		boolean  equal = true;
-		if(array1.length==array2.length) {
-		for(int i=0;i<array1.length;i++) {
-			for(int j=0;j<array2.length;j++) {
-				if(array1[i]!=array2[j]) {
-					equal=false;
-					
+	
+	
+
+	// Method for checking the arrays equal or not
+	public static boolean equalityOfTwoArrays(int[] array1, int[] array2) {
+		boolean equal = true;
+		if (array1.length == array2.length) {
+			for (int i = 0; i < array1.length; i++) {
+				for (int j = 0; j < array2.length; j++) {
+					if (array1[i] != array2[j]) {
+						equal = false;
+
+					}
+
 				}
-				
 			}
-		}
-		}else {
-			equal=false;
+		} else {
+			equal = false;
 		}
 		return equal;
 	}
 
-	//Missing Number Logic
-	public static int MissingNumber(int []array) {
-		int sum=0,n,total,missingNumber;
-		n=array.length+1;
-		
-		//Logic for Missing Number
-		total=n*(n+1)/2;
+	// Missing Number Logic
+	public static int MissingNumber(int[] array) {
+		int sum = 0, n, total, missingNumber;
+		n = array.length + 1;
+
+		// Logic for Missing Number
+		total = n * (n + 1) / 2;
 		for (int i = 0; i < array.length; i++) {
-			sum+=array[i];
+			sum += array[i];
 		}
-		missingNumber=total-sum;
+		missingNumber = total - sum;
 		return missingNumber;
-		
+
 	}
 
 	public static int[] commonElementArray(int[] firstArray, int[] secondArray, int[] thirdArray) {
 		// TODO Auto-generated method stub
-		ArrayList<Integer> list =new ArrayList();
-		 
+		ArrayList<Integer> list = new ArrayList();
+
 		for (int i = 0; i < firstArray.length; i++) {
-			
+
 			for (int j = 0; j < secondArray.length; j++) {
-				
+
 				for (int k = 0; k < thirdArray.length; k++) {
-					
-					/*if(firstArray[i]== secondArray[j]) {
-						if(firstArray[i] == thirdArray[k]) {
-							System.out.println("FirstLogic");
-							//commonArray[i]=firstArray[i];
-							list.add(firstArray[i]) ;
-							int value=firstArray[i];
-							System.out.println(value);
-						}
-					}*/
-					if((firstArray[i]== secondArray[j])&&(firstArray[i] == thirdArray[k])) {
+
+					/*
+					 * if(firstArray[i]== secondArray[j]) { if(firstArray[i] == thirdArray[k]) {
+					 * System.out.println("FirstLogic"); //commonArray[i]=firstArray[i];
+					 * list.add(firstArray[i]) ; int value=firstArray[i]; System.out.println(value);
+					 * } }
+					 */
+					if ((firstArray[i] == secondArray[j]) && (firstArray[i] == thirdArray[k])) {
 						System.out.println("seondLogic");
-						//commonArray[i]=firstArray[i];
-						list.add(firstArray[i]) ;
-						int value=firstArray[i];
+						// commonArray[i]=firstArray[i];
+						list.add(firstArray[i]);
+						int value = firstArray[i];
 						System.out.println(value);
-						
+
 					}
 				}
-				
+
 			}
-			
+
 		}
-	
-		int[] commonArray=list.stream().mapToInt(i -> i).toArray();
-           
+
+		int[] commonArray = list.stream().mapToInt(i -> i).toArray();
+
 		return commonArray;
 	}
 
+	static int[] sortBasedOnZero(int arr[], int n) {
+		int count = 0;
 
+		for (int i = 0; i < n; i++)
+			if (arr[i] != 0)
+				arr[count++] = arr[i];
 
+		while (count < n)
+			arr[count++] = 0;
+		return arr;
+	}
 
+	public static int longest_sequence(int[] nums) {
+		final HashSet<Integer> h_set = new HashSet<Integer>();
+		for (int i : nums)
+			h_set.add(i);
 
-static int[] sortBasedOnZero(int arr[], int n)
-{
-    int count = 0;  
-
-    for (int i = 0; i < n; i++)
-        if (arr[i] != 0)
-            arr[count++] = arr[i];
-    
-    while (count < n)
-        arr[count++] = 0;
-	return arr;
-}
+		int longest_sequence_len = 0;
+		for (int i : nums) {
+			int length = 1;
+			for (int j = i - 1; h_set.contains(j); --j) {
+				h_set.remove(j);
+				++length;
+			}
+			for (int j = i + 1; h_set.contains(j); ++j) {
+				h_set.remove(j);
+				++length;
+			}
+			longest_sequence_len = Math.max(longest_sequence_len, length);
+		}
+		return longest_sequence_len;
+	}
 }
