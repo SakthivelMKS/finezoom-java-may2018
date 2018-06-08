@@ -1,7 +1,11 @@
 package com.finezoom.array;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.omg.Messaging.SyncScopeHelper;
@@ -65,8 +69,6 @@ public class IntegerUtils {
 		}
 
 	}
-	
-	
 
 	// Method for checking the arrays equal or not
 	public static boolean equalityOfTwoArrays(int[] array1, int[] array2) {
@@ -104,7 +106,7 @@ public class IntegerUtils {
 
 	public static int[] commonElementArray(int[] firstArray, int[] secondArray, int[] thirdArray) {
 		// TODO Auto-generated method stub
-		ArrayList<Integer> list = new ArrayList();
+		ArrayList<Integer> list = new ArrayList<Integer>();
 
 		for (int i = 0; i < firstArray.length; i++) {
 
@@ -169,4 +171,107 @@ public class IntegerUtils {
 		}
 		return longest_sequence_len;
 	}
+
+	public static List<Integer> sumOfValueEqualToGivenValue(List<?> firstArray, List<?> secondArray,
+			List<?> thirdArray) {
+
+		// TODO Auto-generated method stub
+		// int number=numbers,
+		int sum = 0;
+		ArrayList<Integer> list = new ArrayList<Integer>();
+
+		for (int i = 0; i < firstArray.size(); i++) {
+			int firstarayValue = (int) firstArray.get(i);
+			for (int j = 0; j < secondArray.size(); j++) {
+				int secondArrayValue = (int) secondArray.get(j);
+				for (int k = 0; k < thirdArray.size(); k++) {
+					int thirdArrayValue = (int) thirdArray.get(0);
+					// sum=firstarayValue+secondArrayValue+thirdArrayValue;
+
+					if (firstarayValue <= secondArrayValue && thirdArrayValue <= secondArrayValue) {
+
+						// calculate the value
+						// of this special
+						// triplet and add sum
+						// of all values
+						// of such triplets
+						sum += (firstarayValue + secondArrayValue) * (secondArrayValue + thirdArrayValue);
+						list.add(sum);
+					}
+					/*
+					 * if(number==sum) {
+					 * System.out.println("The array are containing following values");
+					 * System.out.println("The first Array value"
+					 * +firstarayValue+"The second Array value"
+					 * +secondArrayValue+"The second Array value"+thirdArrayValue+"");
+					 * list.add(firstarayValue); list.add(secondArrayValue);
+					 * list.add(thirdArrayValue); }
+					 */
+
+				}
+
+			}
+
+		}
+
+		return list;
+	}
+
+	public static int getTriangle(List<Integer> firstArray) {
+
+		int n = firstArray.size();
+
+		Collections.sort(firstArray);
+
+		int count = 0;
+
+		for (int i = 0; i < n - 2; ++i) {
+
+			int k = i + 2;
+
+			for (int j = i + 1; j < n; ++j) {
+				while (k < n && firstArray.get(i) + firstArray.get(j) > firstArray.get(k))
+					++k;
+
+				count += k - j - 1;
+			}
+		}
+		return count;
+
+	}
+
+	static boolean sum_pair(int arry[], int size, int sum) {
+		int k;
+		for (k = 0; k < size - 1; k++)
+			if (arry[k] > arry[k + 1])
+				break;
+
+		int l = (k + 1) % size;
+
+		int r = k;
+
+		while (l != r) {
+			if (arry[l] + arry[r] == sum)
+				return true;
+			if (arry[l] + arry[r] < sum)
+				l = (l + 1) % size;
+
+			else
+				r = (size + r - 1) % size;
+		}
+		return false;
+	}
+
+	 public static void rotate(int[] nums, int k) {
+	        int temp, previous;
+	        for (int i = 0; i < k; i++) {
+	            previous = nums[nums.length - 1];
+	            for (int j = 0; j < nums.length; j++) {
+	                temp = nums[j];
+	                nums[j] = previous;
+	                previous = temp;
+	            }
+	        }     
+	 System.out.println(Arrays.toString(nums));       
+	 }
 }

@@ -8,35 +8,30 @@ public class ArraySorting {
 
 	public static void main(String[] args) {
 
-        int i,n,t;          
+		int i, arraySize;
 
-        Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the size of array");
+		System.out.print("Enter the size of array");
 
-        n=sc.nextInt();
+		arraySize = sc.nextInt();
 
-        Integer a[] = new Integer[n];
-        
-        Integer sd = new Integer(43);
-        
+		Integer array[] = new Integer[arraySize];
 
+		System.out.println("Enter elements in array");
 
-        System.out.println("Enter elements in array");
+		for (i = 0; i < arraySize; i++) {
+			array[i] = sc.nextInt();
 
-        for(i=0;i<n;i++)
-        {
-            a[i]=sc.nextInt();
-           
-        }
-        Arrays.sort(a);
-       for(int value:a){
-    	   System.out.println("Uno");
-    	   
-       }
-        Arrays.sort(a, Collections.reverseOrder());
-     for(int value:a)
-        System.out.println("Greates integer is" +value);
-    }
+		}
+		Arrays.sort(array);
+		for (int value : array) {
+			System.out.println(value);
+
+		}
+		Arrays.sort(array, Collections.reverseOrder());
+		for (int value : array)
+			System.out.println("Greates integer is" + value);
+	}
 
 }
