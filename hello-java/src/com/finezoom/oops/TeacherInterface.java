@@ -9,8 +9,8 @@ public interface TeacherInterface {
 
 	ArrayList<Teacher> add(ArrayList<Teacher> arrayList);
 
-	ArrayList<Teacher> update(Teacher teach);
+	ArrayList<Teacher> update(int id, ArrayList<Teacher> arrayList);
 
-	ArrayList<Teacher> remove(int id);
+	ArrayList<Teacher> remove(int id,ArrayList<Teacher>arrayList);
 
 }

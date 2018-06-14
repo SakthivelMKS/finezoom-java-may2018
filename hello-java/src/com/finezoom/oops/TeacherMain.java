@@ -29,31 +29,9 @@ public class TeacherMain extends TeacherImplent {
 			arrayList.add(tech);
 		}
 
-//		ArrayList<Teacher> teach = techMain.add(arrayList);
-//
-//		for (Teacher tt : teach) {
-//
-//			System.out.println(tt.getId());
-//			System.out.println(tt.getName());
-//			System.out.println(tt.getAge());
-//			System.out.println(tt.getAddress());
-//
-//		}
-//		System.out.println("Enter the teacher Id");
-//		int id = scan.nextInt();
-//		ArrayList<Teacher> techDetails = techMain.find(arrayList, id);
-//		for (Teacher object : techDetails) {
-//			System.out.println(object.getId());
-//			System.out.println(object.getName());
-//			System.out.println(object.getAge());
-//			System.out.println(object.getAddress());
-//		}
-		
-		System.out.println("Enter the teacher Id");
-		int removeid = scan.nextInt();
-		ArrayList<Teacher> remove = techMain.remove(removeid);
+	/*	ArrayList<Teacher> teach = techMain.add(arrayList);
 
-		for (Teacher tt : remove) {
+		for (Teacher tt : teach) {
 
 			System.out.println(tt.getId());
 			System.out.println(tt.getName());
@@ -61,6 +39,38 @@ public class TeacherMain extends TeacherImplent {
 			System.out.println(tt.getAddress());
 
 		}
+		System.out.println("Enter the teacher Id");
+		int id = scan.nextInt();
+		ArrayList<Teacher> techDetails = techMain.find(arrayList, id);
+		for (Teacher object : techDetails) {
+			System.out.println(object.getId());
+			System.out.println(object.getName());
+			System.out.println(object.getAge());
+			System.out.println(object.getAddress());
+		}*/
+		
+		System.out.println("Enter the teacher Id");
+		int updateId = scan.nextInt();
+		ArrayList<Teacher> updateList =techMain.update(updateId, arrayList);
+		for (Teacher updateData : updateList) {
+
+			System.out.println(updateData.getId());
+			System.out.println(updateData.getName());
+			System.out.println(updateData.getAge());
+			System.out.println(updateData.getAddress());
+
+		}
+		//System.out.println("Enter the teacher Id");
+		//int removeid = scan.nextInt();
+		/*ArrayList<Teacher> remove = techMain.remove(removeid,arrayList);
+		for (Teacher tt : remove) {
+
+			System.out.println(tt.getId());
+			System.out.println(tt.getName());
+			System.out.println(tt.getAge());
+			System.out.println(tt.getAddress());
+
+		}*/
 
 	}
 
