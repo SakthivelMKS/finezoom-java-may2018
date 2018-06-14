@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TeacherImplent implements TeacherInterface {
-	ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
+ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
 
 	@Override
 	public ArrayList<Teacher> add(ArrayList<Teacher> arrayList) {
