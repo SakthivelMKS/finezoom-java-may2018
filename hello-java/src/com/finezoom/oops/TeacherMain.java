@@ -12,7 +12,6 @@ public class TeacherMain extends TeacherImplent {
 	public static void main(String[] args) {
 		ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
 		Teacher tech = null;
-		//int optionss = 0;
 		TeacherMain techMain = new TeacherMain();
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Teacher> arrayLists = new ArrayList<Teacher>();
