@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TeacherImplent implements TeacherInterface {
-ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
+	ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
 
 	@Override
 	public ArrayList<Teacher> add(ArrayList<Teacher> arrayList) {
 
-		//Teacher teacher1 = null;
+		// Teacher teacher1 = null;
 		for (Teacher teacher : arrayList) {
 			System.out.println("in implementations");
 			System.out.println(teacher.getId());
@@ -29,7 +29,7 @@ ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
 		Teacher teacher1 = null;
 		// ArrayList list = new ArrayList();
 		Scanner scan = new Scanner(System.in);
-		//ArrayList<Teacher> list1 = new ArrayList<Teacher>();
+		// ArrayList<Teacher> list1 = new ArrayList<Teacher>();
 		int index = 0;
 
 		for (int i = 0; i < arrayList.size(); i++) {
@@ -38,7 +38,6 @@ ArrayList<Teacher> arrayList = new ArrayList<Teacher>();
 			if (id == teacher1.getId()) {
 				index = i;
 
-				
 			}
 
 		}
