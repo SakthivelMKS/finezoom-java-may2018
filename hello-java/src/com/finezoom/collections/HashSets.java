@@ -1,7 +1,7 @@
 package com.finezoom.collections;
 
 import java.util.HashSet;
-
+import java.util.List;
 import java.util.Scanner;
 
 public class HashSets {
@@ -31,13 +31,13 @@ public class HashSets {
 		// Employee Details find Method calling
 		System.out.println("Enter the find id");
 		int empid = scan.nextInt();
-		HashSet<Employee> findList = HashSetUtil.find(updateList, empid);
+		HashSet<Employee> findList = HashSetUtil.find(employeList, empid);
 		HashSetUtil.itreator(findList);
 		HashSetUtil.forEach(findList);
 		System.out.println("Enter the remove id");
 		int removeId = scan.nextInt();
 		// Employee Details remove Method calling
-		HashSet<Employee> RemovedList = HashSetUtil.remove(removeId, employeLists);
+		HashSet<Employee> RemovedList = HashSetUtil.remove(removeId, employeList);
 		HashSetUtil.itreator(RemovedList);
 		HashSetUtil.forEach(RemovedList);
 	}

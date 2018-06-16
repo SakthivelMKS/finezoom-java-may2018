@@ -71,15 +71,16 @@ public class HashSetUtil {
 	 * 
 	 * @arrayList
 	 */
-	public static HashSet<Employee> update(int id, HashSet<Employee> sets) {
+	public static HashSet<Employee> update(int id, HashSet<Employee> emplists) {
 		HashSet<Employee> emp =null;
 		
 		
 		Scanner scan = new Scanner(System.in);
 		int index = 0;
 
-		for (int i = 0; i < sets.size(); i++) {
-			HashSet<Employee> emps  = sets.get(i);
+		HashSet<Employee>  emplists1 = emplists;
+		for (int i = 0; i < emplists1.size(); i++) {
+			emp  = emplists.get
 					
 
 			if (id == emp.getEmpId()) {
@@ -108,11 +109,11 @@ public class HashSetUtil {
 	 * @arrayList
 	 */
 
-	public static List<Employee> remove(int id, HashSet<Employee> linkList) {
+	public static HashSet<Employee> remove(int id, HashSet<Employee> linkList) {
 
 		Employee emp = null;
 
-		List<Employee> removedList = linkList;
+		HashSet<Employee>  removedList = linkList;
 		int index = 0, value = 0;
 		for (Employee emps : linkList) {
 			if (id == emps.getEmpId()) {
@@ -136,15 +137,15 @@ public class HashSetUtil {
 	 * 
 	 * @arrayList
 	 */
-	public static HashSet<Employee>find(HashSet<Employee>linkList, int id) {
+	public static HashSet<Employee>find(HashSet<Employee>hashList, int id) {
 
 		Employee emp = new Employee();
 
-		List<Employee> list1 = new LinkedList<Employee>();
+		HashSet<Employee>list1 = new HashSet<Employee>();
 		int index = 0;
 
-		for (int i = 0; i < linkList.size(); i++) {
-			emp = linkList.get(i);
+		for (int i = 0; i < hashList.size(); i++) {
+			emp = ((List<Employee>) hashList).get(i);
 
 			if (id == emp.getEmpId()) {
 				index = i;
