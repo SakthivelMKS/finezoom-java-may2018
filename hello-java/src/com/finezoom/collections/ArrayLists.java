@@ -17,14 +17,17 @@ public class ArrayLists {
 		ArrayList<Employee> employeDetails = ArrayUtils.addDetails(arraySize);
 		ArrayUtils.itreator(employeDetails);
 		ArrayUtils.forEach(employeDetails);
+		
 		System.out.println("Enter the update id");
 		int id = scan.nextInt();
 		ArrayList<Employee> updateList = ArrayUtils.update(id, employeDetails);
 		ArrayUtils.forEach(updateList);
+		
 		System.out.println("Enter the find id");
 		int ids = scan.nextInt();
 		ArrayList<Employee> findList = ArrayUtils.find(employeDetails, ids);
 		ArrayUtils.forEach(findList);
+		
 		System.out.println("Enter the Remove id");
 		int empid = scan.nextInt();
 		ArrayList<Employee> removedList = ArrayUtils.remove(empid, employeDetails);

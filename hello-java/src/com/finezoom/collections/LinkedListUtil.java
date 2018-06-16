@@ -1,15 +1,17 @@
 package com.finezoom.collections;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
-public class ArrayUtils {
+public class LinkedListUtil {
 	/*
-	 * Itreator for employee details using ForEach
+	 * Itreator for employee details using forEach
+	 * 
 	 * @param employeDetails
 	 */
-	public static void forEach(ArrayList<Employee> employeDetails) {
+	public static void forEach(List<Employee> employeDetails) {
 		for (Employee emp : employeDetails) {
 			System.out.println(emp.getEmpId() + emp.getEmpName() + emp.getEmpAge() + emp.getEmpSalary());
 		}
@@ -17,10 +19,11 @@ public class ArrayUtils {
 
 	/*
 	 * Itreator for employee details using Itreator
-	 *  @param employeDetails
+	 * 
+	 * @param employeDetails
 	 */
 	@SuppressWarnings("rawtypes")
-	public static void itreator(ArrayList<Employee> employeDetails) {
+	public static void itreator(List<Employee> employeDetails) {
 		Iterator itr = employeDetails.iterator();
 		while (itr.hasNext()) {
 			Employee emps = (Employee) itr.next();
@@ -29,19 +32,19 @@ public class ArrayUtils {
 
 	}
 
+	
+
 	/*
-	 * Add method for employe details
-	 * @arraySize
+	 * Employee details added
 	 */
-	@SuppressWarnings("unchecked")
-	public static ArrayList<Employee> addDetails(int arraySize) {
+	public static List<Employee> addEmployeeDetails(int size) {
 		int count = 1;
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		Employee emp = null;
 		@SuppressWarnings("rawtypes")
-		ArrayList<Employee> arrayList = new ArrayList();
-		for (int i = 0; i < arraySize; i++) {
+		List<Employee> linkedLists = new LinkedList();
+		for (int i = 0; i < size; i++) {
 			emp = new Employee();
 
 			System.out.println("Enter the " + count + " Employee Details");
@@ -53,26 +56,27 @@ public class ArrayUtils {
 			emp.setEmpAge(scan.nextInt());
 			System.out.println("Enter the Employee salary");
 			emp.setEmpSalary(scan.nextInt());
-			arrayList.add(emp);
+			linkedLists.add(emp);
 			count++;
 		}
-		return arrayList;
+		return linkedLists;
+
 	}
 
 	/*
 	 * Update method for employe details
+	 * 
 	 * @id
+	 * 
 	 * @arrayList
 	 */
-	public static ArrayList<Employee> update(int id, ArrayList<Employee> arrayList) {
+	public static List<Employee> update(int id, List<Employee> linkList) {
 		Employee emp = null;
-	
 		Scanner scan = new Scanner(System.in);
-		
 		int index = 0;
 
-		for (int i = 0; i < arrayList.size(); i++) {
-			emp = arrayList.get(i);
+		for (int i = 0; i < linkList.size(); i++) {
+			emp = linkList.get(i);
 
 			if (id == emp.getEmpId()) {
 				index = i;
@@ -81,30 +85,32 @@ public class ArrayUtils {
 
 		}
 		System.out.println("Enter the id for update");
-		arrayList.get(index).setEmpId(scan.nextInt());
+		linkList.get(index).setEmpId(scan.nextInt());
 		System.out.println("Enter the name for update");
-		arrayList.get(index).setEmpName(scan.next());
+		linkList.get(index).setEmpName(scan.next());
 		System.out.println("Enter the Age for update");
-		arrayList.get(index).setEmpAge(scan.nextInt());
+		linkList.get(index).setEmpAge(scan.nextInt());
 		System.out.println("Enter the address for update");
-		arrayList.get(index).setEmpSalary(scan.nextInt());
+		linkList.get(index).setEmpSalary(scan.nextInt());
 
-		return arrayList;
+		return linkList;
 	}
 
 	/*
 	 * Remove method for employe details
+	 * 
 	 * @id
+	 * 
 	 * @arrayList
 	 */
 
-	public static ArrayList<Employee> remove(int id, ArrayList<Employee> arrayList) {
+	public static List<Employee> remove(int id, List<Employee> linkList) {
 
 		Employee emp = null;
 
-		ArrayList<Employee> removedList = arrayList;
+		List<Employee> removedList = linkList;
 		int index = 0, value = 0;
-		for (Employee emps : removedList) {
+		for (Employee emps : linkList) {
 			if (id == emps.getEmpId()) {
 				value = index;
 				emps.getEmpId();
@@ -114,20 +120,27 @@ public class ArrayUtils {
 			}
 			index++;
 		}
-		removedList.remove(value);
-		return removedList;
+		linkList.remove(value);
+		return linkList;
 
 	}
 
-	public static ArrayList<Employee> find(ArrayList<Employee> arrayList, int id) {
+	/*
+	 * find method for employe details
+	 * 
+	 * @id
+	 * 
+	 * @arrayList
+	 */
+	public static List<Employee> find(List<Employee> linkList, int id) {
 
-		Employee emp = null;
-		// ArrayList list = new ArrayList();
-		ArrayList<Employee> list1 = new ArrayList<Employee>();
+		Employee emp = new Employee();
+
+		List<Employee> list1 = new LinkedList<Employee>();
 		int index = 0;
 
-		for (int i = 0; i < arrayList.size(); i++) {
-			emp = arrayList.get(i);
+		for (int i = 0; i < linkList.size(); i++) {
+			emp = linkList.get(i);
 
 			if (id == emp.getEmpId()) {
 				index = i;
