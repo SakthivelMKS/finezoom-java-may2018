@@ -33,12 +33,11 @@ public class HashSetUtil {
 
 	}
 
-	
-
 	/*
 	 * Employee details added
+	 * @size
 	 */
-	public static 	HashSet<Employee> addEmployeeDetails(int size) {
+	public static HashSet<Employee> addEmployeeDetails(int size) {
 		int count = 1;
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
@@ -72,33 +71,31 @@ public class HashSetUtil {
 	 * @arrayList
 	 */
 	public static HashSet<Employee> update(int id, HashSet<Employee> emplists) {
-		HashSet<Employee> emp =null;
-		
-		
-		Scanner scan = new Scanner(System.in);
-		int index = 0;
+		Employee emps = null;
 
-		HashSet<Employee>  emplists1 = emplists;
-		for (int i = 0; i < emplists1.size(); i++) {
-			emp  = emplists.get
-					
+		Scanner scan = new Scanner(System.in);
+		int index = 0, value;
+
+		HashSet<Employee> emplists1 = emplists;
+		for (Employee emp : emplists) {
 
 			if (id == emp.getEmpId()) {
-				index = i;
+				value = index;
+
+				System.out.println("Enter the id for update");
+				emp.setEmpId(scan.nextInt());
+				System.out.println("Enter the name for update");
+				emp.setEmpName(scan.next());
+				System.out.println("Enter the Age for update");
+				emp.setEmpAge(scan.nextInt());
+				System.out.println("Enter the address for update");
+				emp.setEmpSalary(scan.nextInt());
 
 			}
-
+			index++;
 		}
-		System.out.println("Enter the id for update");
-		hashSet.get(index).setEmpId(scan.nextInt());
-		System.out.println("Enter the name for update");
-		hashSet.get(index).setEmpName(scan.next());
-		System.out.println("Enter the Age for update");
-		hashSet.get(index).setEmpAge(scan.nextInt());
-		System.out.println("Enter the address for update");
-		hashSet.get(index).setEmpSalary(scan.nextInt());
 
-		return linkList;
+		return emplists;
 	}
 
 	/*
@@ -109,24 +106,24 @@ public class HashSetUtil {
 	 * @arrayList
 	 */
 
-	public static HashSet<Employee> remove(int id, HashSet<Employee> linkList) {
+	public static HashSet<Employee> remove(int id, HashSet<Employee> removedList) {
 
 		Employee emp = null;
 
-		HashSet<Employee>  removedList = linkList;
+//		HashSet<Employee> removedList = linkList;
 		int index = 0, value = 0;
-		for (Employee emps : linkList) {
+		for (Employee emps : removedList) {
 			if (id == emps.getEmpId()) {
-				value = index;
-				emps.getEmpId();
+				//value = index;
+				value=emps.getEmpId();
 				emps.getEmpName();
 				emps.getEmpAge();
 				emps.getEmpSalary();
 			}
 			index++;
 		}
-		linkList.remove(value);
-		return linkList;
+		removedList.remove(value);
+		return removedList;
 
 	}
 
@@ -137,28 +134,26 @@ public class HashSetUtil {
 	 * 
 	 * @arrayList
 	 */
-	public static HashSet<Employee>find(HashSet<Employee>hashList, int id) {
+	public static HashSet<Employee> find(HashSet<Employee> emplists, int id) {
 
-		Employee emp = new Employee();
+		Employee em = new Employee();
 
-		HashSet<Employee>list1 = new HashSet<Employee>();
+		HashSet<Employee> findList = new HashSet<Employee>();
 		int index = 0;
 
-		for (int i = 0; i < hashList.size(); i++) {
-			emp = ((List<Employee>) hashList).get(i);
+		for (Employee emp : emplists) {
 
 			if (id == emp.getEmpId()) {
-				index = i;
-				emp.setEmpId(emp.getEmpId());
-				emp.setEmpName(emp.getEmpName());
-				emp.setEmpAge(emp.getEmpAge());
-				emp.setEmpSalary(emp.getEmpSalary());
-				list1.add(emp);
+				em.setEmpId(emp.getEmpId());
+				em.setEmpName(emp.getEmpName());
+				em.setEmpAge(emp.getEmpAge());
+				em.setEmpSalary(emp.getEmpSalary());
+				findList.add(em);
 			}
-
+			index++;
 		}
 
-		return list1;
+		return findList;
 	}
 
 }
