@@ -88,7 +88,7 @@ public class ArrayUtils {
 		arrayList.get(index).setEmpAge(scan.nextInt());
 		System.out.println("Enter the address for update");
 		arrayList.get(index).setEmpSalary(scan.nextInt());
-
+		scan.close();
 		return arrayList;
 	}
 
@@ -100,7 +100,7 @@ public class ArrayUtils {
 
 	public static ArrayList<Employee> remove(int id, ArrayList<Employee> arrayList) {
 
-		Employee emp = null;
+	
 
 		ArrayList<Employee> removedList = arrayList;
 		int index = 0, value = 0;
@@ -124,13 +124,10 @@ public class ArrayUtils {
 		Employee emp = null;
 		// ArrayList list = new ArrayList();
 		ArrayList<Employee> list1 = new ArrayList<Employee>();
-		int index = 0;
-
 		for (int i = 0; i < arrayList.size(); i++) {
 			emp = arrayList.get(i);
 
 			if (id == emp.getEmpId()) {
-				index = i;
 				emp.setEmpId(emp.getEmpId());
 				emp.setEmpName(emp.getEmpName());
 				emp.setEmpAge(emp.getEmpAge());

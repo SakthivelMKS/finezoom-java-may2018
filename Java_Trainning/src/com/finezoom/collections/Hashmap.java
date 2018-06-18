@@ -4,10 +4,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class Hashmap {
 	static Scanner scan = new Scanner(System.in);
@@ -56,7 +54,7 @@ public class Hashmap {
 	 * 
 	 * @employeeDetails
 	 */
-	private static void forEach(Map employeeDetails) {
+	private static void forEach(Map<Integer, Employee> employeeDetails) {
 		// Map values itreating using collections
 		Collection<Employee> employees = employeeDetails.values();
 		for (Employee emp : employees) {
@@ -78,8 +76,8 @@ public class Hashmap {
 	 * 
 	 */
 
-	private static Map addEmployeeDetails() {
-		Map<Integer, Employee> map = new HashMap();
+	private static Map<Integer, Employee> addEmployeeDetails() {
+		Map<Integer, Employee> map = new HashMap<Integer, Employee>();
 		Employee emp;
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter The Size of the employee");
@@ -95,6 +93,7 @@ public class Hashmap {
 			System.out.println("Enter salary");
 			emp.setEmpSalary(scan.nextInt());
 			map.put(i, emp);
+			scan.close();
 		}
 		return map;
 	}
@@ -103,10 +102,10 @@ public class Hashmap {
 	 * Finding Employee details
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private static Map<Integer, Employee> findEmployeeDetails(Map<Integer, Employee> employeeDetails, int findId) {
 		Collection<Employee> employees = employeeDetails.values();
-		@SuppressWarnings({ "rawtypes", "unchecked" })
-		Map<Integer, Employee> map = new HashMap();
+		Map<Integer, Employee> map = new HashMap<Integer, Employee>();
 		Employee emp;
 		for (Employee emps : employees) {
 			emp = new Employee();
@@ -125,9 +124,9 @@ public class Hashmap {
 	 * updateEmployeeDetails
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private static Map<Integer, Employee> updateEmployeeDetails(Map<Integer, Employee> employeeDetails, int findId) {
 		Collection<Employee> employees = employeeDetails.values();
-		@SuppressWarnings({ "rawtypes", "unchecked" })
 		int index = 0;
 		Employee emp;
 		for (Employee emps : employees) {
@@ -153,7 +152,6 @@ public class Hashmap {
 	 * removeEmployeeDetails using id
 	 * 
 	 */
-	@SuppressWarnings("unused")
 	private static Map<Integer, Employee> removeEmployeeDetails(Map<Integer, Employee> employeeDetails, int removeId) {
 		/*
 		 * Collection<Employee> employees = employeeDetails.values();

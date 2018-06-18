@@ -9,13 +9,14 @@ public class ArrayContainsTwoSpecifiedElements {
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		int sum = 0, position = 0, arraySize = scan.nextInt();
+		int position = 0, arraySize = scan.nextInt();
 
 		int array[] = new int[arraySize];
 		for (int i = 0; i < arraySize; i++) {
 			position++;
 			System.out.println("Please enter the " + position + " String");
 			array[i] = scan.nextInt();
+			scan.close();
 		}
 		System.out.println(Arrays.toString(array));
 		for (int value : array) {

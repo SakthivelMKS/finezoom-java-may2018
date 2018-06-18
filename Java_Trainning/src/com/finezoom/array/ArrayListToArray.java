@@ -1,6 +1,6 @@
 package com.finezoom.array;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,7 +32,7 @@ public static void main(String args[]){
 	for(String stringValue:stringArray) {
 		System.out.println("The value"+stringValue);
 	}
-	
+	scan.close();
 	
 }
 }

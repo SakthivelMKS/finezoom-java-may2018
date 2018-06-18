@@ -1,14 +1,12 @@
 package com.finezoom.array;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class ArrayMaxMinSequence {
 
-	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 
 		int i, arraySize;
@@ -17,8 +15,8 @@ public class ArrayMaxMinSequence {
 		arraySize = sc.nextInt();
 		int count = 0,countPlus=0;
 		boolean success = false;
-		List arrayList = new ArrayList();
-		List maxMinList =new ArrayList();
+		List<Integer> arrayList = new ArrayList<Integer>();
+		List<Integer> maxMinList =new ArrayList<Integer>();
 		System.out.println("Enter elements in array");
 
 		for (i = 0; i < arraySize; i++) {
@@ -40,7 +38,7 @@ public class ArrayMaxMinSequence {
 		}
 		
 		System.out.println(maxMinList.toString());
-		
+		sc.close();
 	}
 
 }

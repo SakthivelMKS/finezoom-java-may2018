@@ -10,7 +10,7 @@ public class FindingCommonElementInTwoArray {
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the first Array size");
-		int avg = 0, sum = 0,secondArraySize, firstArraySize = scan.nextInt();
+		int secondArraySize, firstArraySize = scan.nextInt();
 		System.out.println("Enter the second Array size");
 		secondArraySize=scan.nextInt();
 		// System.out.println("Enter the Element " + number + " of an Array");
@@ -40,7 +40,7 @@ public class FindingCommonElementInTwoArray {
 		}
 		System.out.println(set);*/
 		
-		Set set =new HashSet();
+		Set<Integer> set =new HashSet<Integer>();
 		 for (int i = 0; i < firstArray.length; i++)
 	        {
 	            for (int j = 0; j < secondArray.length; j++)
@@ -53,7 +53,7 @@ public class FindingCommonElementInTwoArray {
 	        }
 	 
 	        System.out.println(set);  
-		
+	        scan.close();
 	}
 
 }

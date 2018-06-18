@@ -7,16 +7,17 @@ public class ArrayContainsGivenValue {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		int count=0,position = 0, arraySize = scan.nextInt();
+		int count=0, arraySize = scan.nextInt();
 		String searchValue;
 		String array[] = new String[arraySize];
 		for (int i = 0; i < arraySize; i++) {
-			position++;
+			
 			//System.out.println("Please enter the " + position + " String");
 			array[i] = scan.next();
 		}
 		System.out.println("Enter the String For Search in this array");
 		searchValue = scan.next();
+		scan.close();
 		String[] matchValue = null;
 		for (String value : array) {
 			if (searchValue.equals(value)) {

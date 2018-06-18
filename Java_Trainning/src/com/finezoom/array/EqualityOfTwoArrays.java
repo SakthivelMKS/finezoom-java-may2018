@@ -9,7 +9,7 @@ public class EqualityOfTwoArrays {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the first Array size");
-		int avg = 0, sum = 0, secondArraySize, firstArraySize = scan.nextInt();
+		int  secondArraySize, firstArraySize = scan.nextInt();
 		System.out.println("Enter the second Array size");
 		secondArraySize = scan.nextInt();
 		// System.out.println("Enter the Element " + number + " of an Array");
@@ -42,6 +42,7 @@ public class EqualityOfTwoArrays {
 		} else {
 			System.out.println("The Array are !equal");
 		}
+		  scan.close();
 	}
 
 }

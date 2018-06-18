@@ -1,7 +1,6 @@
 package com.finezoom.array;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ public class GivenValueEqualToSumThreeArray {
 
 		Scanner scan = new Scanner(System.in);
 
-		int avg = 0, sum = 0, count = 0, secondArraySize, firstArraySize, thirdArraySize;
+		int  count = 0, secondArraySize, firstArraySize, thirdArraySize;
 		System.out.println("Enter the first Array size");
 		firstArraySize = scan.nextInt();
 		System.out.println("Enter the second Array size");
@@ -48,13 +47,15 @@ public class GivenValueEqualToSumThreeArray {
 		/*System.out.println("Enter The Number");
 		int number=scan.nextInt();
 		 */
-		@SuppressWarnings("unchecked")
+		
 		List<Integer> array = IntegerUtils.sumOfValueEqualToGivenValue(firstArray, secondArray, thirdArray);
 		for (int commonValue : array) {
 			System.out.println("commonValue of Three Array" + commonValue);
 
 		}
+		scan.close();
 	}
+
 
 	/*
 	 * String ParamPurposeDescription = "Family Maintenance &#x2F; Savings"; String
@@ -62,4 +63,7 @@ public class GivenValueEqualToSumThreeArray {
 	 * (ParamPurposeDescription.contains(purposeDescription)) {
 	 * System.out.println("This is STP Transaction"); }
 	 */
+	
+	 
 }
+

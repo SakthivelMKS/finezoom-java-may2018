@@ -9,7 +9,7 @@ public class FindingCommonElementsOfThreeArray {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 
-		int avg = 0, sum = 0, count = 0, secondArraySize, firstArraySize, thirdArraySize;
+		int count = 0, secondArraySize, firstArraySize, thirdArraySize;
 		System.out.println("Enter the first Array size");
 		firstArraySize = scan.nextInt();
 		System.out.println("Enter the second Array size");
@@ -45,6 +45,7 @@ public class FindingCommonElementsOfThreeArray {
 			System.out.println("commonValue of Three Array" + commonValue);
 
 		}
+		  scan.close();
 	}
 
 }

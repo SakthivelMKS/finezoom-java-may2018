@@ -1,8 +1,6 @@
 package com.finezoom.oops;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 public class TeacherImplent implements TeacherInterface {
@@ -49,14 +47,15 @@ public class TeacherImplent implements TeacherInterface {
 		arrayList.get(index).setAge(scan.next());
 		System.out.println("Enter the address for update");
 		arrayList.get(index).setAddress(scan.next());
-
+		scan.close();
 		return arrayList;
+		
 	}
 
 	@Override
 	public ArrayList<Teacher> remove(int id, ArrayList<Teacher> arrayList) {
 
-		Teacher techs = null;
+		//Teacher techs = null;
 
 		ArrayList<Teacher> removedList = arrayList;
 		int index = 0, value = 0;
@@ -81,13 +80,13 @@ public class TeacherImplent implements TeacherInterface {
 		Teacher teacher1 = null;
 		// ArrayList list = new ArrayList();
 		ArrayList<Teacher> list1 = new ArrayList<Teacher>();
-		int index = 0;
+		//int index = 0;
 
 		for (int i = 0; i < arrayList.size(); i++) {
 			teacher1 = arrayList.get(i);
 
 			if (id == teacher1.getId()) {
-				index = i;
+				//index = i;
 				teacher1.setId(teacher1.getId());
 				teacher1.setName(teacher1.getName());
 				teacher1.setAge(teacher1.getAge());

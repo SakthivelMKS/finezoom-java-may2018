@@ -1,10 +1,8 @@
 package com.finezoom.collections;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class LinkedListUtil {
@@ -24,11 +22,11 @@ public class LinkedListUtil {
 	 * 
 	 * @param employeDetails
 	 */
-	@SuppressWarnings("rawtypes")
+	
 	public static void itreator(List<Employee> employeDetails) {
-		Iterator itr = employeDetails.iterator();
+		Iterator<Employee> itr = employeDetails.iterator();
 		while (itr.hasNext()) {
-			Employee emps = (Employee) itr.next();
+			Employee emps = itr.next();
 			System.out.println(emps.getEmpId() + emps.getEmpName() + emps.getEmpAge() + emps.getEmpSalary());
 		}
 
@@ -44,8 +42,7 @@ public class LinkedListUtil {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		Employee emp = null;
-		@SuppressWarnings("rawtypes")
-		List<Employee> linkedLists = new LinkedList();
+		List<Employee> linkedLists = new LinkedList<Employee>();
 		for (int i = 0; i < size; i++) {
 			emp = new Employee();
 
@@ -94,7 +91,7 @@ public class LinkedListUtil {
 		linkList.get(index).setEmpAge(scan.nextInt());
 		System.out.println("Enter the address for update");
 		linkList.get(index).setEmpSalary(scan.nextInt());
-
+		scan.close();
 		return linkList;
 	}
 
@@ -108,9 +105,9 @@ public class LinkedListUtil {
 
 	public static List<Employee> remove(int id, List<Employee> linkList) {
 
-		Employee emp = null;
-
-		List<Employee> removedList = linkList;
+	
+		//Employee emp = null;
+		//List<Employee> removedList = linkList;
 		int index = 0, value = 0;
 		for (Employee emps : linkList) {
 			if (id == emps.getEmpId()) {
@@ -139,13 +136,13 @@ public class LinkedListUtil {
 		Employee emp = new Employee();
 
 		List<Employee> list1 = new LinkedList<Employee>();
-		int index = 0;
+		
 
 		for (int i = 0; i < linkList.size(); i++) {
 			emp = linkList.get(i);
 
 			if (id == emp.getEmpId()) {
-				index = i;
+				
 				emp.setEmpId(emp.getEmpId());
 				emp.setEmpName(emp.getEmpName());
 				emp.setEmpAge(emp.getEmpAge());

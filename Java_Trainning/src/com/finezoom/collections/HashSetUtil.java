@@ -2,8 +2,6 @@ package com.finezoom.collections;
 
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 public class HashSetUtil {
@@ -42,7 +40,6 @@ public class HashSetUtil {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		Employee emp = null;
-		@SuppressWarnings("rawtypes")
 		HashSet<Employee> hashLists = new HashSet<>();
 		for (int i = 0; i < size; i++) {
 			emp = new Employee();
@@ -71,16 +68,16 @@ public class HashSetUtil {
 	 * @arrayList
 	 */
 	public static HashSet<Employee> update(int id, HashSet<Employee> emplists) {
-		Employee emps = null;
+		//Employee emps = null;
 
 		Scanner scan = new Scanner(System.in);
-		int index = 0, value;
+	
 
-		HashSet<Employee> emplists1 = emplists;
+		
 		for (Employee emp : emplists) {
 
 			if (id == emp.getEmpId()) {
-				value = index;
+			
 
 				System.out.println("Enter the id for update");
 				emp.setEmpId(scan.nextInt());
@@ -90,9 +87,9 @@ public class HashSetUtil {
 				emp.setEmpAge(scan.nextInt());
 				System.out.println("Enter the address for update");
 				emp.setEmpSalary(scan.nextInt());
-
+				scan.close();
 			}
-			index++;
+		
 		}
 
 		return emplists;
@@ -111,22 +108,22 @@ public class HashSetUtil {
 		Employee emp = null;
 		
 		HashSet<Employee> removedLists = removedList;
-		int index = 0, value = 0;
+		
 		for (Employee emps : removedLists) {
 
 			emp=new Employee();
 			if (id == emps.getEmpId()) {
-				value = index;
+				
 			
 				emp.setEmpId(emps.getEmpId());
 				emp.setEmpName(emps.getEmpName());
 				emp.setEmpAge(emps.getEmpAge());
 				emp.setEmpSalary(emps.getEmpSalary());
 			}
-			index++;
+			
 		}
 	
-		removedLists.remove(value);
+	//	removedLists.remove(value);
 		removedLists.remove(emp);
 		return removedLists;
 
@@ -144,8 +141,7 @@ public class HashSetUtil {
 		Employee em = new Employee();
 
 		HashSet<Employee> findList = new HashSet<Employee>();
-		int index = 0;
-
+		
 		for (Employee emp : emplists) {
 
 			if (id == emp.getEmpId()) {
@@ -155,7 +151,7 @@ public class HashSetUtil {
 				em.setEmpSalary(emp.getEmpSalary());
 				findList.add(em);
 			}
-			index++;
+			
 		}
 		
 		return findList;

@@ -18,14 +18,14 @@ public class ArrayIndex {
 		}
 		System.out.println("Enter the Value for finding index");
 		indexValue=scan.next();
-		int [] matchValue = null;
+		//int [] matchValue = null;
 		//for( int i = 0 ; i < stringArray.length ; i++ ) {
 			for(String stringvalue:stringArray) {
 				
             if( stringvalue.equals(indexValue)) { 
             	
                  System.out.println("The index of "+indexValue+" the value"+index);
-                 matchValue=new int[] {index};
+                 //matchValue=new int[] {index};
             }
             index++;
 			}
@@ -35,6 +35,7 @@ public class ArrayIndex {
           //  	System.out.println("The Given Value occured"  +indexValue+  "following index:"+indexs);
           //  }
 		
+			scan.close();
 		
 	}
 	}

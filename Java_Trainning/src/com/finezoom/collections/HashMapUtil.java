@@ -14,7 +14,6 @@ public class HashMapUtil {
 	 * 
 	 * @param employeDetails
 	 */
-	@SuppressWarnings("unchecked")
 	public static void forEach(ArrayList<Map<Integer, Employee>> employeelist) {
 
 		for (int i = 0; i < employeelist.size(); i++) {
@@ -56,7 +55,7 @@ public class HashMapUtil {
 	 * 
 	 * @arrayList
 	 */
-	public static ArrayList addEmploye(Scanner scan, int size) {
+	public static ArrayList<Map<Integer, Employee>> addEmploye(Scanner scan, int size) {
 		Employee emp = null;
 
 		ArrayList<Map<Integer, Employee>> list = new ArrayList<Map<Integer, Employee>>();
@@ -89,6 +88,7 @@ public class HashMapUtil {
 
 	public static ArrayList<Map<Integer, Employee>> updateEmployee(ArrayList<Map<Integer, Employee>> employeelist,
 			int id) {
+		@SuppressWarnings("unused")
 		Map<Integer, Employee>maps=new HashMap<>();
 		Scanner scan=new Scanner(System.in);
 		for (int i = 0; i < employeelist.size(); i++) {
@@ -104,6 +104,7 @@ public class HashMapUtil {
 					System.out.println("Enter the salary for update");
 					emps.setEmpSalary(scan.nextInt());
 					//maps.put(i, emps);
+					scan.close();
 					entry.setValue(emps);
 				}
 						

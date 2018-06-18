@@ -12,6 +12,7 @@ public class ExceptionsThrows {
 			int a=scan.nextInt();
 			//Method Calling 
 			ExceptionUtil.divison(a);
+			scan.close();
 		} catch (Exception e) {
 			//Catching 
 			System.out.println("Exception getting: " + e);

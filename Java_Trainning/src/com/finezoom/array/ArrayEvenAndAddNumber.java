@@ -17,6 +17,7 @@ public class ArrayEvenAndAddNumber {
 			position++;
 			System.out.println("Please enter the " + position + " String");
 			array[i] = scan.nextInt();
+			scan.close();
 		}
 		for (int value : array) {
 			if (value % 2 == 0) {

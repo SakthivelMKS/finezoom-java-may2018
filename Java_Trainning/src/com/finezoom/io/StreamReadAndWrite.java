@@ -51,7 +51,9 @@ public class StreamReadAndWrite {
 
 		String fileAsString = sb.toString();
 		System.out.println("Contents : " + fileAsString);
+		buf.close();
 		return fileAsString;
+		
 	}
 
 }

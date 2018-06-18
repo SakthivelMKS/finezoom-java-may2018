@@ -11,7 +11,7 @@ public class ArraySortNegativeAndPositive {
 
 		Scanner scan = new Scanner(System.in);
 
-		int avg = 0, sum = 0, count = 0, firstArraySize;
+		int  count = 0, firstArraySize;
 		System.out.println("Enter the first Array size");
 		firstArraySize = scan.nextInt();
 		
@@ -43,7 +43,7 @@ public class ArraySortNegativeAndPositive {
 		System.out.println("After Sorting array"+zeroArrays.toString());
 
 	
-	
+		scan.close();
 	}
 
 }

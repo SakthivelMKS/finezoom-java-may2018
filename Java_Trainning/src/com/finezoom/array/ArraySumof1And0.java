@@ -10,7 +10,7 @@ public class ArraySumof1And0 {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 
-		int avg = 0, sum = 0, count = 0, firstArraySize;
+		int count = 0, firstArraySize;
 		System.out.println("Enter the first Array size");
 		firstArraySize = scan.nextInt();
 		
@@ -35,6 +35,7 @@ public class ArraySumof1And0 {
 			
 		}
 
+		scan.close();
 	}
 
 }

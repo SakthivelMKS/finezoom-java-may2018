@@ -19,6 +19,7 @@ public class ArrayDuplicateNumberCount {
 
 		for (i = 0; i < arraySize; i++) {
 			arrayList.add(sc.nextInt());
+			sc.close();
 		}
 		System.out.println("Sorting Array" + arrayList);
 		System.out.println("Enter the Number for searching");

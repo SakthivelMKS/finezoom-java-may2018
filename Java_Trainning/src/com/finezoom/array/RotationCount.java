@@ -16,6 +16,7 @@ public class RotationCount {
 
 		}
 		IntegerUtils.rotate(arr,1);
+		scan.close();
 	}
 
 }

@@ -41,6 +41,7 @@ public class CyclicallyRotateClockWiseOne {
 			buider1.append(integer);
 		}
 		System.out.print("AfterRoation;" + buider1);
+		scan.close();
 
 	}
 

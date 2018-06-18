@@ -21,7 +21,7 @@ public class StringPool {
 		System.out.println(name.hashCode());
 		
 		
-		Demo demo = new Demo();
+		//Demo demo = new Demo();
 		
 		
 	}

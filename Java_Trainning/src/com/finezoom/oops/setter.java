@@ -1,6 +1,5 @@
 package com.finezoom.oops;
 
-import java.util.Date;
 
 public class setter {
 String name;

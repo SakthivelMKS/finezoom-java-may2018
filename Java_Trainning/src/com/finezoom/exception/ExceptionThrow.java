@@ -12,7 +12,7 @@ public class ExceptionThrow {
 		try {
 		int a =scan.nextInt();
 			int c=a/0;		
-			
+			System.out.println(c);
 		}catch(Exception e)
 		{
 		      System.out.println("Exception e"+e); 

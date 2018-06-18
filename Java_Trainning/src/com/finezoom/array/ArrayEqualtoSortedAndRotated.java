@@ -17,6 +17,7 @@ public class ArrayEqualtoSortedAndRotated {
 		}
 		System.err.println("Enter the number:");
 		int value = scan.nextInt();
+		scan.close();
 		Boolean succes = IntegerUtils.sum_pair(arr, arr.length, value);
 		if (succes) {
             System.out.print("Array has a pair of elements with sum "+value);

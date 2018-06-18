@@ -36,6 +36,7 @@ public class AverageArrayProgram {
 		avg=sum/numbers.length;
 		System.out.println("forEach sum" + sum);
 		System.out.println("forEach avg" + avg);
+		scan.close();
 
 	}
 

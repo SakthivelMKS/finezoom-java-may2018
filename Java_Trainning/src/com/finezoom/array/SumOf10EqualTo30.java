@@ -28,6 +28,7 @@ public class SumOf10EqualTo30 {
 		else {
 			System.out.println("true");
 		}
+		scan.close();
 	}
 
 }

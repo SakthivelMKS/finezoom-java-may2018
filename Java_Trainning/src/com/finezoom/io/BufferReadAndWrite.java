@@ -34,6 +34,7 @@ public class BufferReadAndWrite {
 
 	public static String fileReading() throws FileNotFoundException {
 		FileReader fr = new FileReader("D:/Java-Trainning/trunk/teacher.txt");
+	
 		BufferedReader br =new BufferedReader(fr);
 	String line=null;
 		try {
@@ -41,11 +42,14 @@ public class BufferReadAndWrite {
 			while(line!=null){
 				System.out.println(line);
 				line=br.readLine();
+				
 			}
+			br.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return line;
 	}
 

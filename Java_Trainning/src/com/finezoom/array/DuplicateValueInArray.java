@@ -10,7 +10,7 @@ public class DuplicateValueInArray {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the size of an Array");
-		int avg = 0, sum = 0, number = scan.nextInt();
+		int number = scan.nextInt();
 		// System.out.println("Enter the Element " + number + " of an Array");
 		String[] numbers = new String[number];
 		// Logic for length of array finding
@@ -26,7 +26,7 @@ public class DuplicateValueInArray {
 	            	//numbers[i] = "Duplicate"; 
 	            System.out.println("The value alrady contain this array:"+numbers[i] );
 	        }
-
+	        scan.close();
 	}
 
 }

@@ -28,6 +28,7 @@ public class ArrayGrid {
 			System.out.println();
 
 		}
+		scan.close();
 
 	}
 

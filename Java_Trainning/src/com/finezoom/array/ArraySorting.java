@@ -32,6 +32,7 @@ public class ArraySorting {
 		Arrays.sort(array, Collections.reverseOrder());
 		for (int value : array)
 			System.out.println("Greates integer is" + value);
+		sc.close();
 	}
 
 }

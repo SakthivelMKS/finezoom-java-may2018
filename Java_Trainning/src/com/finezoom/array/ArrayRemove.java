@@ -40,5 +40,6 @@ public class ArrayRemove {
 				System.out.print(arr[i] + " ");
 			}
 		}
+		scan.close();
 	}
 }

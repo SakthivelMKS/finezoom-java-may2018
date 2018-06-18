@@ -1,7 +1,5 @@
 package com.finezoom.array;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class ArrayMaxAndMin {
@@ -10,9 +8,9 @@ public class ArrayMaxAndMin {
 				//variable and array declaration
 				Scanner scan = new Scanner(System.in);
 				System.out.println("Enter the array size");
-				String value;
-				int index, count = 0, arraysize = scan.nextInt();
-				int intArray[] = new int[arraysize], indexValue;
+				
+				int  count = 0, arraysize = scan.nextInt();
+				int intArray[] = new int[arraysize];
 				//values are added in the array
 				for (int i = 0; i < intArray.length; i++) {
 					count++;
@@ -30,6 +28,7 @@ public class ArrayMaxAndMin {
 				//Using Collection frame Work to fin Max
 				//  int minimum = Collections.min(Arrays.asList(intArray));
 				  System.out.println("The Maximum Value of the array"+max);
+				  scan.close();
 	}
 
 }

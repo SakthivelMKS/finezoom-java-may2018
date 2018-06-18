@@ -10,7 +10,7 @@ public class ArrayInsertionSpecificElement {
 		System.out.println("Enter the array size");
 		String value;
 		int index, count = 0, arraysize = scan.nextInt();
-		String stringArray[] = new String[arraysize], indexValue;
+		String stringArray[] = new String[arraysize];
 		//values are added in the array
 		for (int i = 0; i < stringArray.length; i++) {
 			count++;
@@ -28,6 +28,7 @@ public class ArrayInsertionSpecificElement {
 			System.out.print(arr);
 
 		}
+		scan.close();
 
 	}
 

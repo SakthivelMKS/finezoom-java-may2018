@@ -8,7 +8,7 @@ public class LargestAndSmalletValue {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		int even = 0, odd = 0, position = 0, arraySize = scan.nextInt();
+		int  position = 0, arraySize = scan.nextInt();
 
 		int array[] = new int[arraySize];
 		for (int i = 0; i < arraySize; i++) {
@@ -27,6 +27,8 @@ public class LargestAndSmalletValue {
 		System.out.println("The Maximum value:"+max);
 		System.out.println("The Minimum value:"+min);
 		System.out.println("The difference of the lowest and the highest is " + diff);
+		scan.close();
 	}
+	
 
 }

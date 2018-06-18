@@ -19,6 +19,7 @@ public class PairofElementsEqualToGivenInteger {
 				System.out.println("Enter the number");
 				int number=scan.nextInt();
 				IntegerUtils.pairOfElementsEqual(array, number);
+				scan.close();
 	}
 
 }

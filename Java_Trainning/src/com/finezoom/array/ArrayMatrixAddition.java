@@ -42,6 +42,7 @@ public class ArrayMatrixAddition {
 	 
 	         System.out.println();
 	      }
+	      in.close();
 	   }
 
 	}

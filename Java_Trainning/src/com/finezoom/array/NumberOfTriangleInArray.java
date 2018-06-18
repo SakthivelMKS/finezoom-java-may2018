@@ -9,7 +9,7 @@ public class NumberOfTriangleInArray {
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
-		Boolean key = false;
+		
 		int count = 0, firstArraySize;
 		System.out.println("Enter the first Array size");
 		firstArraySize = scan.nextInt();

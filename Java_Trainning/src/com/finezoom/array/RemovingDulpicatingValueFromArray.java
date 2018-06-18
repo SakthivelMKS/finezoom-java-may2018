@@ -10,10 +10,10 @@ public class RemovingDulpicatingValueFromArray {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		String value;
-		int index, count = 0, arraysize = scan.nextInt();
+	
+		int  count = 0, arraysize = scan.nextInt();
 		String[] stringArray = new String[arraysize];
-		String indexValue;
+		
 		//values are added in the array
 		for (int i = 0; i < stringArray.length; i++) {
 			count++;
@@ -33,6 +33,7 @@ public class RemovingDulpicatingValueFromArray {
 			  myVals.add(stringArray[i]);
 			}
 		System.out.println(set.toString());
+		scan.close();
 	}
 
 }

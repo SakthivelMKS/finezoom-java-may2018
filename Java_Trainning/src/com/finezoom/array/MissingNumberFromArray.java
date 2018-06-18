@@ -1,6 +1,6 @@
 package com.finezoom.array;
 
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class MissingNumberFromArray {
@@ -22,6 +22,7 @@ public class MissingNumberFromArray {
 		}
 		int missingNumber = IntegerUtils.MissingNumber(intArray);
 		System.out.println("The Missing Number"+intArray+" of the array"+missingNumber);
+		scan.close();
 	}
 
 }

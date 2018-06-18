@@ -9,7 +9,7 @@ public class Array0ToLeft1ToRightSide {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		int avg = 0, sum = 0, count = 0, firstArraySize;
+		int  count = 0, firstArraySize;
 		System.out.println("Enter the first Array size");
 		firstArraySize = scan.nextInt();
 		
@@ -22,6 +22,7 @@ public class Array0ToLeft1ToRightSide {
 			count++;
 			System.out.println("Please enter first array" + count + " number");
 			firstArray.add(scan.nextInt());
+			scan.close();
 
 		}
 		List<Integer> zeroArrays = new ArrayList<Integer>();

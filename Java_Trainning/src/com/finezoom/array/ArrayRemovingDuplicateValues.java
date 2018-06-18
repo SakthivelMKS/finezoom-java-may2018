@@ -1,12 +1,8 @@
 package com.finezoom.array;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.Map.Entry;
 import java.util.Set;
 
 
@@ -18,9 +14,9 @@ public class ArrayRemovingDuplicateValues {
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		int sum = 0, position = 0, arraySize = scan.nextInt();
-		ArrayList arrayList=new ArrayList();
-		Set set=new HashSet(); 
+		int  position = 0, arraySize = scan.nextInt();
+		ArrayList<Integer> arrayList=new ArrayList<Integer>();
+		Set<Integer> set=new HashSet<Integer>(); 
 		//int array[] = new int[arraySize];
 		for (int i = 0; i < arraySize; i++) {
 			position++;
@@ -40,6 +36,7 @@ public class ArrayRemovingDuplicateValues {
 		for(Object object:set) {
 		System.out.print(object);	
 		}
+		scan.close();
 		}
 		
 		

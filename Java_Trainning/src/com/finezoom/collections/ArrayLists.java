@@ -7,11 +7,11 @@ public class ArrayLists {
 
 	public static void main(String[] args) {
 
-		@SuppressWarnings("resource")
-		ArrayList<Employee> arrayList = new ArrayList();
+		//ArrayList<Employee> arrayList = new ArrayList<Employee>();
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the ArrayList Size");
 		int arraySize = scan.nextInt();
+		scan.close();
 		// Employee emp = new Employee();
 
 		ArrayList<Employee> employeDetails = ArrayUtils.addDetails(arraySize);

@@ -9,10 +9,10 @@ public class ArraySecondMaxAndMin {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		String value;
-		int index, count = 0, arraysize = scan.nextInt();
+	
+		int  count = 0, arraysize = scan.nextInt();
 		int[] stringArray = new int[arraysize];
-		String indexValue;
+	
 		//values are added in the array
 		for (int i = 0; i < stringArray.length; i++) {
 			count++;
@@ -28,6 +28,7 @@ public class ArraySecondMaxAndMin {
 		System.out.println(build);
 		System.out.println("SecondMaximum"+stringArray[arraysize-2]);
 		System.out.println("SecondMinimum"+stringArray[1]);
+		scan.close();
 	}
 
 }

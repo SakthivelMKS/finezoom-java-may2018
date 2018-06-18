@@ -10,7 +10,7 @@ public class ZeroLeftAndOneRightRandomNumber {
 
 			Scanner scan = new Scanner(System.in);
 
-			int avg = 0, sum = 0, count = 0, firstArraySize;
+			int  count = 0, firstArraySize;
 			System.out.println("Enter the first Array size");
 			firstArraySize = scan.nextInt();
 			
@@ -40,6 +40,7 @@ public class ZeroLeftAndOneRightRandomNumber {
 				zeroArrays.add(integer);
 			}
 			System.out.println("After Sorting array"+zeroArrays.toString());
+			scan.close();
 
 	}
 

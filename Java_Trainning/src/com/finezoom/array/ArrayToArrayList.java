@@ -24,15 +24,15 @@ public class ArrayToArrayList {
 			stringArray[i] = scan.next();
 		}
 		//one way
-		ArrayList<Object> arrayList=new ArrayList(Arrays.asList(stringArray));
+		ArrayList<Object> arrayList=new ArrayList<Object>(Arrays.asList(stringArray));
 		System.out.println(arrayList);
 		//second Waye
-		ArrayList<Object>collectionList=new ArrayList();
+		ArrayList<Object>collectionList=new ArrayList<Object>();
 		Collections.addAll(collectionList, stringArray);
 		System.out.println(collectionList);
 		//Manual Way
-		ArrayList<Object> manualList=new ArrayList();
-		for(String arr:stringArray){
+		ArrayList<Object> manualList=new ArrayList<Object>();
+		for(@SuppressWarnings("unused") String arr:stringArray){
 			manualList.add(stringArray);
 		}
 		
@@ -47,6 +47,7 @@ public class ArrayToArrayList {
 						System.out.println(object);
 						}
 				}
+				scan.close();
 	}
 
 }
