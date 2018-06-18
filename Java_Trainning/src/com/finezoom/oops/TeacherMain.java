@@ -14,7 +14,6 @@ public class TeacherMain extends TeacherImplent {
 		Teacher tech = null;
 		TeacherMain techMain = new TeacherMain();
 		Scanner scan = new Scanner(System.in);
-		ArrayList<Teacher> arrayLists = new ArrayList<Teacher>();
 		FileReader fr;
 		Teacher techs = null;
 		System.out.println("Are You Uplod File Press 1 or Manually Press2 ");
@@ -36,7 +35,9 @@ public class TeacherMain extends TeacherImplent {
 					techs.setAddress(data[3]);
 
 					arrayList.add(techs);
+					
 				}
+				br.close();
 			} catch (NumberFormatException | IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -125,7 +126,7 @@ public class TeacherMain extends TeacherImplent {
 	
 
 	
-		
+		scan.close();
 	}
 /*
 	public static void manualWayManipulating() {
