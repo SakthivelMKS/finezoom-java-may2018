@@ -109,21 +109,26 @@ public class HashSetUtil {
 	public static HashSet<Employee> remove(int id, HashSet<Employee> removedList) {
 
 		Employee emp = null;
-
-//		HashSet<Employee> removedList = linkList;
+		
+		HashSet<Employee> removedLists = removedList;
 		int index = 0, value = 0;
-		for (Employee emps : removedList) {
+		for (Employee emps : removedLists) {
+
+			emp=new Employee();
 			if (id == emps.getEmpId()) {
-				//value = index;
-				value=emps.getEmpId();
-				emps.getEmpName();
-				emps.getEmpAge();
-				emps.getEmpSalary();
+				value = index;
+			
+				emp.setEmpId(emps.getEmpId());
+				emp.setEmpName(emps.getEmpName());
+				emp.setEmpAge(emps.getEmpAge());
+				emp.setEmpSalary(emps.getEmpSalary());
 			}
 			index++;
 		}
-		removedList.remove(value);
-		return removedList;
+	
+		removedLists.remove(value);
+		removedLists.remove(emp);
+		return removedLists;
 
 	}
 
@@ -152,7 +157,7 @@ public class HashSetUtil {
 			}
 			index++;
 		}
-
+		
 		return findList;
 	}
 

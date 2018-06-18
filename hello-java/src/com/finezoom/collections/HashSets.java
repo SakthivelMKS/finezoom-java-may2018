@@ -32,7 +32,7 @@ public class HashSets {
 		// Employee Details find Method calling
 		System.out.println("Enter the find id");
 		int empid = scan.nextInt();
-		HashSet<Employee> findList = HashSetUtil.find(employeList, empid);
+		HashSet<Employee> findList = HashSetUtil.find(updateList, empid);
 		HashSetUtil.itreator(findList);
 		HashSetUtil.forEach(findList);
 		
