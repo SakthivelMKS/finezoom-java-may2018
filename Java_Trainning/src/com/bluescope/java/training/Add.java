@@ -14,7 +14,7 @@ public class Add {
 	c=a+b;
 		System.out.println(Constant.Sum+c);
 	
-	
+	sc.close();
 
 	}
 

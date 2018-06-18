@@ -46,6 +46,7 @@ public class LoopingExample {
 			}
 			break;
 		}
+		sc.close();
 	}
 
 }

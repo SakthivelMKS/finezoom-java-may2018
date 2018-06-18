@@ -1,6 +1,6 @@
 package com.bluescope.java.training;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class JavaClassObjectExample {
@@ -26,8 +26,9 @@ public static void main(String args[]) {
 			return bookname.concat(auther)+price;
 		}
 		
-       public ArrayList bookDetails1(int a,int b) {
-    	   ArrayList list=new ArrayList();
+       @SuppressWarnings("rawtypes")
+	public ArrayList<Comparable> bookDetails1(int a,int b) {
+		ArrayList<Comparable> list=new ArrayList<Comparable>();
     	   list.add(a);
     	   list.add(b);
     	   String Result;

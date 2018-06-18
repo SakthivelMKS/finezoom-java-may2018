@@ -12,7 +12,8 @@ public class JavaObjectLearning {
 		Scanner sc = new Scanner(System.in);
 		int a=sc.nextInt();
 		int b=sc.nextInt();
-		
+		sc.close();
+	@SuppressWarnings("rawtypes")
 	ArrayList dom=	jj.bookDetails1(a,b);
 	
 	for(Object values: dom)

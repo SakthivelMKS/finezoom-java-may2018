@@ -16,6 +16,7 @@ public class Crud {
 		System.out.println(Constant.Subtraction+(fisrtValue-secondValue));
 		System.out.println(Constant.Multiplication+(fisrtValue*secondValue));
 		System.out.println(Constant.Division+(fisrtValue/secondValue));
+		ss.close();
 	}
 
 }

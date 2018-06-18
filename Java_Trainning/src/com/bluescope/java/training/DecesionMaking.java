@@ -34,6 +34,7 @@ public class DecesionMaking {
 		else {
 			System.out.println("your very  old");
 		}
+		ss.close();
 	}
 
 }
