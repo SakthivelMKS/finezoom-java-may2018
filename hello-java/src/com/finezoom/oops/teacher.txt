@@ -1,4 +1,0 @@
-id,name,age,address
-121,Sakthi,24,Agaram
-212,vijay,25,pennagram
-313,ari,27,Dharmapuri
