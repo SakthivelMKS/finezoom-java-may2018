@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class QuotientAndRemainder {
 			System.out.println("Divder:" + divder);
 			System.out.println("Quotient:" + quotient);
 	
-		
+			scan.close();
 	}
 
 }

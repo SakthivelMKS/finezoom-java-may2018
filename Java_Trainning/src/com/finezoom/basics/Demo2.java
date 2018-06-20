@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import com.finezoom.oops.Demo;
 import com.finezoom.oops.DemoAbstract;

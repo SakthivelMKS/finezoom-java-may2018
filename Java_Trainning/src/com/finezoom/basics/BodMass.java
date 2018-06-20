@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 class BodMass
@@ -25,6 +25,7 @@ class BodMass
 			}else{
 			System.out.println("Obesity"+bodMass);
 			}
+			scan.close();
     }
 }
   

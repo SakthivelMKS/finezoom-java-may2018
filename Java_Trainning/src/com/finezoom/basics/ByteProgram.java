@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ public class ByteProgram {
 			byte bytevalue=scan.nextByte();
 			
 			System.out.println("bytevalue:"+bytevalue);
+			scan.close();
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 
 import java.util.Scanner;
@@ -18,6 +18,7 @@ public class InvalidValueToTheVriable {
      
       System.out.println(floatValue);
       System.out.println(intValue);
+      scan.close();
       
 	}
 

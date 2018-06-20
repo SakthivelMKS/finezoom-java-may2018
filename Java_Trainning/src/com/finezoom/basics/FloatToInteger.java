@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -19,6 +19,7 @@ public class FloatToInteger {
 		intValue1 = Math.round(floatValue);
 		System.out.println(intValue);
 		System.out.println(intValue1);
+		scan.close();
 
 	}
 

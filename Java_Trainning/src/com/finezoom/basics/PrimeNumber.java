@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -26,5 +26,6 @@ public class PrimeNumber {
 			System.out.println("The Number " + number + "is not a Prime");
 
 		}
+		sc.close();
 	}
 }

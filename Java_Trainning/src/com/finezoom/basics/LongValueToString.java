@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class LongValueToString {
 		System.out.println(stringValue1);
 		System.out.println(stringValue2);
 	
-
+scan.close();
 	}
 
 }

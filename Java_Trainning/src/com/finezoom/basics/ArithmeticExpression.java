@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -22,6 +22,7 @@ public class ArithmeticExpression {
 		System.out.println("The divide of the value:" + total);
 		total = firstValue % secondValue;
 		System.out.println("The remainder of the value:" + total);
+		scan.close();
 	}
 
 }

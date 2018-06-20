@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ public class ArrayGrid {
 			System.out.println();
 
 		}
-
+		scan.close();
 	}
 
 }

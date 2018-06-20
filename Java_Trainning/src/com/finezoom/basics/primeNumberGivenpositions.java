@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -27,6 +27,7 @@ public class primeNumberGivenpositions {
 			}
 		}
 		System.out.println("Value of " + positions + " prime: " + number);
+		sc.close();
 	}
 
 }

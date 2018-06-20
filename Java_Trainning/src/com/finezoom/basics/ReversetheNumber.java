@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class ReversetheNumber {
 			integerValue = integerValue / 10;
 			System.out.println(remainder);
 		}
-
+		scan.close();
 	}
 
 }

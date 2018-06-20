@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -36,7 +36,7 @@ public class AverageArrayProgram {
 		avg=sum/numbers.length;
 		System.out.println("forEach sum" + sum);
 		System.out.println("forEach avg" + avg);
-
+		scan.close();
 	}
 
 }

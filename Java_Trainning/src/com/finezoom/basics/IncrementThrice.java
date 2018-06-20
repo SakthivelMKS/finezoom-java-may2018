@@ -1,5 +1,5 @@
 
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -16,6 +16,7 @@ public class IncrementThrice {
 			
 		}
 		System.out.println("The Increment Value is:" + sum);
+		scan.close();
 
 	}
 

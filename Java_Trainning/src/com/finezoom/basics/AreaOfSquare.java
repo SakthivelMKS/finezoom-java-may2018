@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class AreaOfSquare {
 		// Logic for area of the square
 		area = length * length;
 		System.out.println("The area of the square is:" + area);
+		in.close();
 	}
 
 }

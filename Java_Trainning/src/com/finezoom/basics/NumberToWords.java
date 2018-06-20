@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -137,6 +137,7 @@ public class NumberToWords {
 			builder.append(values);
 		}
 		System.out.println("Your Enter Following Number" + builder.toString());
+		scan.close();
 	}
 
 }

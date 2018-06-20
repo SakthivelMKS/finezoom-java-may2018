@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 
 import java.util.Scanner;
@@ -37,6 +37,7 @@ public class MathsRule {
 							System.out.println("Your enter Invaild Number");
 							}
 				}
+				scan.close();
 		
 		}
 

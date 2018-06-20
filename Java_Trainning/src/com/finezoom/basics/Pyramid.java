@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -27,6 +27,6 @@ public class Pyramid {
 			}
 			System.out.println();
 		}
-
+		scan.close();
 	}
 }

@@ -1,11 +1,10 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class EmployeManagementSystem {
-private static final String  one ="1";
-private static final String  two ="2";
+
 	public static void main(String[] args)
 	{  
 		// TODO Auto-generated method stub
@@ -51,18 +50,18 @@ private static final String  two ="2";
 							max=secondMonth;
 							}
 						if(max>thirdMonth) {
-							max=max;
+							//max=max;
 							}
 						else {
 							max=thirdMonth;
 						}
 						if(max>fourthMonth) {
-							max=max;
+							//max=max;
 						}else {
 							max=fourthMonth;
 						}
 						if(max>fifthMonth) {
-							max=max;
+							//max=max;
 						}
 						else {
 							max=fifthMonth;
@@ -91,19 +90,19 @@ private static final String  two ="2";
 							max=secondMonth;
 							}
 						if(max<thirdMonth) {
-							max=max;
+							//max=max;
 							}
 						else {
 							max=thirdMonth;
 						}
 						
 						if(max<fourthMonth) {
-							max=max;
+							//max=max;
 						}else {
 							max=fourthMonth;
 						}
 						if(max<fifthMonth) {
-							max=max;
+							//max=max;
 						}
 						else {
 							max=fifthMonth;
@@ -312,6 +311,7 @@ private static final String  two ="2";
 					    
 							
 						  			}
+				scan.close();
 						}
                 }
 		

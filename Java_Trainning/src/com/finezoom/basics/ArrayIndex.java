@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -33,7 +33,7 @@ public class ArrayIndex {
             	System.out.println("The Given Value occured"  +indexValue+  "following index:"+indexs);
             }
 		
-		
+            scan.close();
 	}
 	}
 

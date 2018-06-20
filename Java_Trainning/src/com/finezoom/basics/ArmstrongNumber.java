@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -32,6 +32,7 @@ public class ArmstrongNumber {
 			System.out.println("This number Armstrong number");
 		else
 			System.out.println("This number is Not a armstrong number");
+		scan.close();
 	}
 
 }

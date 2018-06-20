@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -19,6 +19,7 @@ public class ProgramComaparison {
 		} else {
 			System.out.println("The Second Value is greater the first value:" + secondValue);
 		}
+		scan.close();
 	}
 
 }

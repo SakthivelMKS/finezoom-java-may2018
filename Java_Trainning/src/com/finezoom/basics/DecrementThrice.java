@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -10,12 +10,13 @@ public class DecrementThrice {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the value for decrement");
 		//System.out.println("Enter the value for how many time decrement");
-		int value,incremntSize,subtract=0;
+		int value,subtract=0;
 		value = scan.nextInt();
 		subtract=value-value;
 		subtract=subtract-value;
 		subtract=subtract-value;
 		System.out.println("The Increment Value is:" + subtract);
+		scan.close();
 
 	}
 

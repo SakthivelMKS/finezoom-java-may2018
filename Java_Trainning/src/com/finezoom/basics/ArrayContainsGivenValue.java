@@ -1,4 +1,4 @@
-package com.finezoom.com;
+package com.finezoom.basics;
 
 import java.util.Scanner;
 
@@ -7,11 +7,11 @@ public class ArrayContainsGivenValue {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the array size");
-		int count=0,position = 0, arraySize = scan.nextInt();
+		int count=0, arraySize = scan.nextInt();
 		String searchValue;
 		String array[] = new String[arraySize];
 		for (int i = 0; i < arraySize; i++) {
-			position++;
+			
 			//System.out.println("Please enter the " + position + " String");
 			array[i] = scan.next();
 		}
@@ -29,6 +29,7 @@ public class ArrayContainsGivenValue {
 		for(String value:matchValue) {
 			System.out.println("The Value Occur "+count+"time in the Array"+value);
 		}
+		scan.close();
 	}
 
 }
