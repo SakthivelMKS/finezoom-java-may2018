@@ -14,7 +14,7 @@ public class Array0ToLeft1ToRightSide {
 		firstArraySize = scan.nextInt();
 		
 
-		// System.out.println("Enter the Element " + number + " of an Array");
+		// System.out.println("Enter the Element " + number + " of an Arrays");
 		List<Integer> firstArray = new ArrayList<Integer>();
 		
 		// Logic for length of array finding
