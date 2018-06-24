@@ -1,6 +1,6 @@
 package com.finezoom.jdbc;
 
-import java.sql.Connection;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,16 +8,19 @@ import java.util.Scanner;
 import com.finezoom.collections.Employee;
 
 public class EmployeeImplement implements EmployeeInterface{
+	 Employee emp = new Employee();
+	 Scanner scan =new Scanner(System.in);
 
 	@Override
 	public  ArrayList<Employee> addEmployee() {
 		System.out.println("Enter the size of the Employee");
-        Scanner scan =new Scanner(System.in);
+       
+        int employeeSize=scan.nextInt();
         ArrayList<Employee> empList = new ArrayList<>();
 		  try {
 	
-        Employee emp = null;
-        int employeeSize=scan.nextInt();
+       
+   
         for (int i = 0; i < employeeSize; i++) {
         	emp =new Employee();
         	System.out.println("Enter the Employe Id");
@@ -28,12 +31,17 @@ public class EmployeeImplement implements EmployeeInterface{
 			emp.setEmpAge(scan.nextInt());
         	System.out.println("Enter the Employe Salary");
 			emp.setEmpSalary(scan.nextInt());
-			
+			  empList.add(emp);
 		}
         scan.close();
-            empList.add(emp);
-			jdbcSample.insertEmployee(empList);
-			
+          
+			try {
+				jdbcSample.insertEmployee(empList);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			empList	=jdbcSample.selectEmployee();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -45,20 +53,64 @@ public class EmployeeImplement implements EmployeeInterface{
 
 	@Override
 	public ArrayList<Employee> updateEmployee() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList <Employee> Emplist=null;
+		try {
+		System.out.println("Enter The current employee");
+		int empId =scan.nextInt();
+		System.out.println("Enter The Employee id For Update");
+		emp.setEmpId(scan.nextInt());
+		System.out.println("Enter The Employee name For Update");
+		emp.setEmpName(scan.next());
+		System.out.println("Enter The Employee age For Update");
+		emp.setEmpAge(scan.nextInt());
+		System.out.println("Enter The Employee salary For Update");
+		emp.setEmpSalary(scan.nextInt());
+		
+			jdbcSample.updateEmployee(emp,empId);
+			Emplist=jdbcSample.selectEmployee();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Emplist;
 	}
 
 	@Override
 	public ArrayList<Employee> findEmployee() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Employee> employefind=null;
+	
+		try {
+			System.out.println("Enter the Employee id");
+			int findId=scan.nextInt();
+			 employefind=jdbcSample.findEmployee(findId);
+		
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return employefind;
 	}
 
 	@Override
 	public ArrayList<Employee> removeEmployee() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Employee> removedList=null;
+	
+		try {
+			System.out.println("Enter the Employee id");
+			int removeId=scan.nextInt();
+		jdbcSample.removeEmployee(removeId);
+		removedList=jdbcSample.selectEmployee();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return removedList;
+	}
+
+	@Override
+	public ArrayList<Employee> allEmployee() {
+	ArrayList<Employee> emplist=jdbcSample.selectEmployee();
+		return emplist;
 	}
 
 }

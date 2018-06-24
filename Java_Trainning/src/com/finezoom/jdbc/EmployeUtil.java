@@ -26,7 +26,7 @@ public class EmployeUtil {
 		Iterator itr = employeDetails.iterator();
 		while (itr.hasNext()) {
 			Employee emps = (Employee) itr.next();
-			System.out.println(emps.getEmpId() + emps.getEmpName() + emps.getEmpAge() + emps.getEmpSalary());
+			System.out.println(emps.getEmpId() + "  " + emps.getEmpName() + "  " + emps.getEmpAge() + "  " + emps.getEmpSalary());
 		}
 
 	}

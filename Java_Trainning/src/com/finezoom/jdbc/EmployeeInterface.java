@@ -9,5 +9,6 @@ ArrayList<Employee>addEmployee();
 ArrayList<Employee>updateEmployee();
 ArrayList<Employee>findEmployee();
 ArrayList<Employee>removeEmployee();
+ArrayList<Employee>allEmployee();
 
 }
